@@ -1,8 +1,9 @@
 <?php
     session_start();
     if(isset($_SESSION['UserID']) == '') {
+        print('<script>location.href = "index.php";</script>');
     } else {
-        print('<script>location.href = "home.php";</script>');
+        $UserID = $_SESSION['UserID'];
     }
 ?>
 <!DOCTYPE HTML>
@@ -16,7 +17,7 @@
         <!-- Search Engine Block -->
         <meta name="robots" content="noindex,nofollow" />
         <!-- Title -->
-        <title>ログイン - Ticper</title>
+        <title>メニュー - Ticper</title>
 
         <!-- jQuery Import -->
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
@@ -33,17 +34,15 @@
                     <a href="#!" class="brand-logo">Ticper</a>
                     <a href="#" data-target="mobilemenu" class="sidenav-trigger"><i class="material-icons">menu</i></a>
                     <ul class="right hide-on-med-and-down">
-                        <li><a href="https://booth.yamabuki.ticper.com">会計用</a></li>
-                        <li><a href="https://org.yamabuki.ticper.com">団体用</a></li>
-                        <li><a href="https://yamabuki.ticper.com">顧客用</a></li>
+                        <li><a href="l-list.php">落とし物</a></li>
+                        <li><a href="signage.php">サイネージ操作</a></li>
                     </ul>
                 </div>
             </div>
         </nav>
         <ul class="sidenav" id="mobilemenu">
-            <li><a href="https://booth.yamabuki.ticper.com">会計用</a></li>
-            <li><a href="https://org.yamabuki.ticper.com">団体用</a></li>
-            <li><a href="https://yamabuki.ticper.com">顧客用</a></li>
+            <li><a href="l-list.php">落とし物</a></li>
+            <li><a href="signage.php">サイネージ操作</a></li>
         </ul>
         <script>
             $(document).ready(function(){
@@ -51,20 +50,22 @@
             });
         </script>
         
-        <!-- 本文 -->
         <div class="container">
             <div class="row">
                 <div class="col s12">
-                    <form action="login.php" method="POST">
-                        <h2>ログイン</h2>
-                        <h5>ログインIDを入力してください。</h5>
-                        <input type="text" name="UserID" placeholder="ログインID" />
-                        <h5>パスワードを入力してください。</h5>
-                        <input type="password" name="Password" placeholder="パスワード" />
-                        <input class="btn" type="submit" class="送信" value="ログイン" />
-                    </form>
+                    <?php
+                        require_once('config/config.php');
+                        $sql = mysqli_query($db_link, "SELECT UserName FROM tp_user_all WHERE UserID = '$UserID'");
+                        $result = mysqli_fetch_assoc($sql);
+                    ?>
+                    <h2>ようこそ</h2>
+                    <p>こんにちは、<?php print($result['UserName']); ?>さん、今回は何をしますか？
+                    <table border="2">
+                        <tr><td style="font-size: x-large;"><a href="l-list.php"><b>落とし物管理</b></a></td><td style="font-size: x-large;"><a href="signage.php"><b>サイネージ操作</b></a></td></tr>
+                    </table>
                 </div>
             </div>
         </div>
     </body>
 </html>
+        
