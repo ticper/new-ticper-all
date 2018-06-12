@@ -1,9 +1,9 @@
 <?php
     session_start();
-    if(isset($_SESSION['UserID']) == '') {
+    if(isset($_SESSION['A_UserID']) == '') {
         print('<script>location.href = "index.php";</script>');
     } else {
-        $UserID = $_SESSION['UserID'];
+        $UserID = $_SESSION['A_UserID'];
     }
 ?>
 <!DOCTYPE HTML>
