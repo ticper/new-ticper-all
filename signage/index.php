@@ -23,5 +23,5 @@
             <h2 class="stock">在庫</h2>
         </div>        
     </body>
-    <div id=footer>食品の説明</div>
+    <div id="footer">食品の説明</div>
 </html>
