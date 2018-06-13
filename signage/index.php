@@ -16,7 +16,7 @@
     </head>
     <body>
         <div id="main">
-    	   <h1>団体名</h1><
+    	   <h1>団体名</h1>
             <h1>住所</h1><br>
             <h2 class="food">食品名</h2><br>
             <h2 class="price">値段</h2>
