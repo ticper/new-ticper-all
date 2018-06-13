@@ -1,0 +1,22 @@
+@charset "utf-8";
+body{
+	background-image: url(../img/0.png);
+	background-repeat: no-repeat;
+	background-size: cover;
+	margin-left:5%;
+}
+h1{
+	background-color: #fff;
+	max-width: 40%;
+	display: inline-block;
+}
+
+h2{
+	background-color: #fff;
+	max-width: 40%;
+	display: inline-block;
+	clear: both;
+}
+h2.price{
+	padding-right: 20px;
+}
