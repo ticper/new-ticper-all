@@ -6,36 +6,51 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-alpha.4/css/materialize.min.css">
-        <link rel="stylesheet" type="text/css" href="style.php">
-        <script type="text/javascript" src="../config/footerFixed.js"></script>
+        <!--<link rel="stylesheet" type="text/css" href="style.css"> -->
+        <!--<link rel="stylesheet" href="style.php">-->
 
         <!-- Search Engine Block -->
         <meta name="robots" content="noindex,nofollow" />
+        <!--<script>
+            setTimeout("location.reload()",
+            <?php
+                require_once('../config/config.php');
+                $sql = mysqli_query($db_link,"SELECT COUNT(FoodID) AS num FROM tp_food");
+                $result = mysqli_fetch_assoc($sql);
+                $signageid = $result['num'];
+                $time = $signageid * 3 * 1000;
+                print($time);
+            ?>-->
+            );
+        </script>
         <!-- Title -->
         <title>サイネージ - Ticper</title>
     </head>
     <body>
-        <div id="main">
-        <?php
-            require_once('../config/config.php');
-            $signageid = 0;
-            $sql = mysqli_query($db_link,"SELECT * FROM tp_food");
-            while($result = mysqli_fetch_assoc($sql)){
-                $signageid = $signageid + 1;
-                $orgid = $result['OrgID'];
-                $sql2 = mysqli_query($db_link,"SELECT * FROM tp_org WHERE OrgID = '$orgid'");
-                $result2 = mysqli_fetch_assoc($sql2);
+        <div id="root">
+            <div id="screen">
+                <section class="contents">
+                    <?php
+                        $signageid = 0;
+                        $sql = mysqli_query($db_link,"SELECT * FROM tp_food");
+                        while($result = mysqli_fetch_assoc($sql)){
+                            $signageid = $signageid + 1;
+                            $orgid = $result['OrgID'];
+                            $sql2 = mysqli_query($db_link,"SELECT * FROM tp_org WHERE OrgID = '$orgid'");
+                            $result2 = mysqli_fetch_assoc($sql2);
+                            print('<div class="content">');
+                            print('<h1 class="orgname">'.$result2['OrgName'].'</h1>');
+                            print('<h1 class="place">'.$result2['OrgPlace'].'</h1><br>');
+                            print('<h2 class="food">'.$result['FoodName'].'</h2><br>');
+                            print('<h2 class="price">'.$result['FoodPrice'].'円</h2>');
+                            print('<h2 class="stock">残り'.$result['FoodStock'].'個</h2>');
+                            print('<div class="footer"><span class="span">'.$result['FoodDescription'].'</span></div>');
+                            print('</div>');
 
-                print('<div id="'.$signageid.'">');
-                print('<h1>'.$result2['OrgName'].'</h1>');
-                print('<h1>'.$result2['OrgPlace'].'</h1><br>');
-                print('<h2 class="food">'.$result['FoodName'].'</h2><br>');
-                print('<h2 class="price">'.$result['FoodPrice'].'</h2>');
-                print('<h2 class="stock">'.$result['FoodStock'].'</h2>');
-                print('</div>');
-            }
-            $_SESSION['signageid'] = $signageid;
-        ?>        
+                        }
+                    ?>
+                </section>
+            </div>
+        </div>      
     </body>
-    <div id="footer">食品の説明</div>
-</html>
+</html> 
