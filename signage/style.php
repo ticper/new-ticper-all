@@ -1,3 +1,10 @@
+<?php
+	session_start();
+	require_once('../config/config.php');
+	$sql = mysqli_query($db_link,"SELECT COUNT(FoodID) AS num FROM tp_food");
+	$result = mysqli_fetch_assoc($sql);
+	$signageid = $result['num'];
+?>
 @charset "utf-8";
 body{
 	background-image: url(../img/0.png);
@@ -39,3 +46,18 @@ h2.food{
 	bottom: 95%;
 	height: 5%; */
 }
+
+@keyframes fadeout {
+	0% { opacity: : 1; }
+	100% { opacity: 0; }
+}
+
+<?php
+	$signage_n = 1;
+	$time = 20;
+	while($signage_n <= $signageid){
+		print('#'.$signage_n.'{ animation: fadeout 5s ease '.$time.'s forwards;	}');
+		$time = $time + 20;
+		$signage_n++;
+	} 
+?>
