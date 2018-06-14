@@ -61,16 +61,25 @@
                         <h2>特徴</h2>
                         <textarea name="tokucho" class="validate"></textarea>
                         <h2>発見場所</h2>
-                        <div class="input-field">
+                        <div class="input-field col s12">
                             <select>
                                 <?php
                                     require_once('config/config.php');
                                     $sql = mysqli_query($db_link, "SELECT * FROM tp_place ORDER BY PlaceFloor ASC");
                                     $floor = 0;
                                     while($result = mysqli_fetch_assoc($sql)) {
-                                        
+                                        print('<option value="'.$result['PlaceID'].'">'.$result['PlaceName'].'</option>');
                                     }
-                        
+                                ?>
+                            </select>
+                        </div>
+                        <input type="submit" value="登録" class="btn">
+                    </form>
+                    <script>
+                        $(document).ready(function(){
+                            $('select').formSelect();
+                        });
+                    </script>
                     <table>
                         <tr><th>品目</th><th>特徴</th><th>発見場所</th><th>登録者</th><th>受け取り</th></tr>
                     </table>
