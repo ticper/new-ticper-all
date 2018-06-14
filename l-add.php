@@ -17,7 +17,7 @@
         <!-- Search Engine Block -->
         <meta name="robots" content="noindex,nofollow" />
         <!-- Title -->
-        <title>落とし物管理 - Ticper</title>
+        <title>落とし物追加 - Ticper</title>
 
         <!-- jQuery Import -->
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
@@ -53,25 +53,26 @@
         <div class="container">
             <div class="row">
                 <div class="col s12">
-                    <h2>落とし物</h2>
-                    <a href="l-add.php" class="btn">落とし物登録</a>
+                    <h2>落とし物追加</h2>
+                    <a href="l-list" class="btn">戻る</a>
+                    <form action="l-adddo.php" method="POST">
+                        <h2>品目</h2>
+                        <input type="text" name="hinmoku" class="validate">
+                        <h2>特徴</h2>
+                        <textarea name="tokucho" class="validate"></textarea>
+                        <h2>発見場所</h2>
+                        <div class="input-field">
+                            <select>
+                                <?php
+                                    require_once('config/config.php');
+                                    $sql = mysqli_query($db_link, "SELECT * FROM tp_place ORDER BY PlaceFloor ASC");
+                                    $floor = 0;
+                                    while($result = mysqli_fetch_assoc($sql)) {
+                                        
+                                    }
+                        
                     <table>
                         <tr><th>品目</th><th>特徴</th><th>発見場所</th><th>登録者</th><th>受け取り</th></tr>
-                        <?php
-                            require_once('config/config.php');
-                            $sql = mysqli_query($db_link, "SELECT * FROM tp_lost ORDER BY Got ASC");
-                            while($result = mysqli_fetch_assoc($sql)) {
-                                $placeid = $result['PlaceID'];
-                                $sql2 = mysqli_query($db_link, "SELECT PlaceName FROM tp_place WHERE PlaceID = '$placeid'");
-                                $result2 = mysqli_fetch_assoc($sql2);
-                                print('<tr><td>'.$result['LostName'].'</td><td>'.$result['LostPoint'].'</td><td>'.$result2['PlaceName'].'</td><td>'.$result['UserID'].'</td>');
-                                if ($result['Got'] == 0) {
-                                    print('<td><b>未受け取り</td><td><a class="btn" href="l-changestatus.php?id='.$result['LostID'].'">受け取り済にする</a></tr>');
-                                } else {
-                                    print('<td><b>受け取り済</td><td><a class="btn" href="l-changestatus.php?id='.$result['LostID'].'">未受け取りにする</a></tr>');
-                                }
-                            }
-                        ?>
                     </table>
                 </div>
             </div>
