@@ -3,8 +3,10 @@
 	$sql = mysqli_query($db_link,"SELECT COUNT(FoodID) AS num FROM tp_food");
 	$result = mysqli_fetch_assoc($sql);
 	$signageid = $result['num'];
+	$footerid = $signageid;
 	$signage_n = 1;
-	$time_o = 3;
+	$time_o = 12;
+	$time_s = 2;
 ?>
 
 html,body {
@@ -103,22 +105,23 @@ h2.food{
 	background-color: rgba(255,255,255,0.5);
 	font-size: 60px;
 	position: absolute;
-	width: 200%;
+	padding-left: 100%; 
+	width: 350%;
 	top: calc(100vh - 90px);
 	overflow: hidden;
 }
+<?php
+while($footerid >= 1){
+print('.f_'.$footerid.' { animation: moved 10s linear '.$time_s.'s forwards; }');
+$time_s = $time_s + 12;
+$footerid--;
+}
+?>
 
 @keyframes moved {
-  0% { transform: translateX(0%); }
-  100% { transform: translateX(-100%); }
+  0% { transform: translateX(0vw); }
+  100% { transform: translateX(-250vw); }
 }
-
-/*.span{
-	position: absolute;
-	animation: moved 15s linear 3s forwards;*/
-	
-}
-
 
 @keyframes fadeout {
 	0% { opacity: 1; }
@@ -131,12 +134,12 @@ h2.food{
 }
 
 <?php
-while($signageid > 1){
+while($signageid >= 1){
 print('
-//.contents .content:nth-child('.$signageid.') { animation: fadeout 3s ease '.$time_o.'s forwards; }
+.contents .content:nth-child('.$signageid.') { animation: fadeout 3s ease '.$time_o.'s forwards; }
 
 ');
-		$time_o = $time_o + 3;
+		$time_o = $time_o + 12;
 		$signageid--;
 }
 ?> 

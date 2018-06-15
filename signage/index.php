@@ -6,21 +6,20 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-alpha.4/css/materialize.min.css">
-        <!--<link rel="stylesheet" type="text/css" href="style.css"> -->
-        <!--<link rel="stylesheet" href="style.php">-->
+        <link rel="stylesheet" href="style.php">
 
         <!-- Search Engine Block -->
         <meta name="robots" content="noindex,nofollow" />
-        <!--<script>
+        <script>
             setTimeout("location.reload()",
             <?php
                 require_once('../config/config.php');
                 $sql = mysqli_query($db_link,"SELECT COUNT(FoodID) AS num FROM tp_food");
                 $result = mysqli_fetch_assoc($sql);
                 $signageid = $result['num'];
-                $time = $signageid * 3 * 1000;
+                $time = $signageid * 12 * 1000;
                 print($time);
-            ?>-->
+            ?>
             );
         </script>
         <!-- Title -->
@@ -44,7 +43,7 @@
                             print('<h2 class="food">'.$result['FoodName'].'</h2><br>');
                             print('<h2 class="price">'.$result['FoodPrice'].'円</h2>');
                             print('<h2 class="stock">残り'.$result['FoodStock'].'個</h2>');
-                            print('<div class="footer"><span class="span">'.$result['FoodDescription'].'</span></div>');
+                            print('<div class="footer f_'.$signageid.'">'.$result['FoodDescription'].'</div>');
                             print('</div>');
 
                         }
