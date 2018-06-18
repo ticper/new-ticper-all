@@ -7,6 +7,7 @@
         
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-alpha.4/css/materialize.min.css">
         <link rel="stylesheet" href="style.php">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 
         <!-- Search Engine Block -->
         <meta name="robots" content="noindex,nofollow" />
@@ -24,14 +25,19 @@
         </script>
         <!-- Title -->
         <title>サイネージ - Ticper</title>
+        <script>
+            $(document).ready(function() {
+                $('#signage').show().fadeIn(1000);
+            });
+        </script> 
     </head>
-    <body>
+    <body id="signage">
         <div id="root">
             <div id="screen">
                 <section class="contents">
                     <?php
                         $signageid = 0;
-                        $sql = mysqli_query($db_link,"SELECT * FROM tp_food");
+                        $sql = mysqli_query($db_link,"SELECT * FROM tp_food ORDER BY FoodID DESC");
                         while($result = mysqli_fetch_assoc($sql)){
                             $signageid = $signageid + 1;
                             $orgid = $result['OrgID'];
@@ -50,6 +56,6 @@
                     ?>
                 </section>
             </div>
-        </div>      
+        </div>     
     </body>
 </html> 
