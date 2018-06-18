@@ -7,7 +7,6 @@
         
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-alpha.4/css/materialize.min.css">
         <link rel="stylesheet" href="style.php">
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 
         <!-- Search Engine Block -->
         <meta name="robots" content="noindex,nofollow" />
@@ -24,14 +23,9 @@
             );
         </script>
         <!-- Title -->
-        <title>サイネージ - Ticper</title>
-        <script>
-            $(document).ready(function() {
-                $('#signage').show().fadeIn(1000);
-            });
-        </script> 
+        <title>サイネージ - Ticper</title> 
     </head>
-    <body id="signage">
+    <body>
         <div id="root">
             <div id="screen">
                 <section class="contents">
@@ -48,18 +42,14 @@
                             print('<h1 class="place">'.$result2['OrgPlace'].'</h1><br>');
                             print('<h2 class="food"><b>'.$result['FoodName'].'</b></h2><br>');
                             print('<h2 class="price">'.$result['FoodPrice'].'円</h2>');
-                            if($result['FoodStock'] >= ($result['FoodStockFrom'] / 0.8)) {
-                                //print('<h2 class="stock">たくさんあります！</h2>');
-                                print($result['FoodStock']);
-                            } elseif ($result['FoodStock'] >= ($result['FoodStockFrom'] / 0.5)) {
-                                //print('<h2 class="stock">まだあります！</h2>');
-                                print($result['FoodStock']);
-                            } elseif ($result['FoodStock'] == 0) {
-                                print($result['FoodStock']);
-                                //print('<h2 class="stock">完売しました。</h2>');
+                            if($result['FoodStock'] >= ($result['FoodStockFrom'] * 0.8)) {
+                                print('<h2 class="stock green_bg">たくさんあります！</h2>');
+                            } elseif ($result['FoodStock'] >= ($result['FoodStockFrom'] * 0.5)) {
+                                print('<h2 class="stock blue_bg">まだあります！</h2>');
                             } elseif ($result['FoodStock'] > 0) {
-                                //print('<h2 class="stock">残りわずかです</h2>');
-                                print($result['FoodStock']);
+                                print('<h2 class="stock yellow_bg">残りわずかです</h2>');
+                            } elseif ($result['FoodStock'] == 0) {
+                                print('<h2 class="stock red_bg">完売しました</h2>');
                             }
                             print('<div class="footer f_'.$signageid.'">'.$result['FoodDescription'].'</div>');
                             print('</div>');

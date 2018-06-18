@@ -15,10 +15,6 @@ html,body {
 	padding: 0;
 }
 
-body #signage {
-	display: none;
-}
-
 #root {
 	position: absolute;
 	top: 0; left: 0;
@@ -137,10 +133,6 @@ $footerid--;
 	100%{ opacity: 0; }
 }
 
-@keyframes fadein{
-	0% { opacity: 0; }
-	100%{ opacity: 1; }
-}
 
 <?php
 while($signageid >= 1){
@@ -152,3 +144,19 @@ print('
 		$signageid--;
 }
 ?> 
+
+.red_bg{
+	background-color: rgba(255,0,0,0.7);
+}
+
+.green_bg{
+	background-color: rgba(153,255,51,0.7);
+}
+
+.blue_bg{
+	background-color: rgba(0,255,255,0.7);
+}
+
+.yellow_bg{
+	background-color: rgba(255,255,0,0.7);
+}
