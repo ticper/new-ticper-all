@@ -70,7 +70,7 @@ $count++;
 
 h1.place{
 	font-size: 40px;
-	margin-left: 5px;
+	margin-left: 15px;
 }
 
 h1.orgname{
@@ -78,19 +78,23 @@ h1.orgname{
 }
 
 h1{
-	border-radius: 25px;
-	background-color: rgba(255,255,255,0.6);
+	border-radius: none;
+	background-color: rgba(255,255,255,0.5);
 	font-size: 80px;
 	max-width: 40%;
 	display: inline-block;
+	color: #000000;
+	padding: 0.5em;
 }
 
 h2{
-	border-radius: 10px;
-	background-color: rgba(255,255,255,0.6);
+	border-radius: none;
+	background-color: rgba(255,255,255,0.5);
 	max-width: 40%;
 	font-size: 50px;
 	display: inline-block;
+	color: black;
+	padding: 0.5em;
 }
 
 h2.price{

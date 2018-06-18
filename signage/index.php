@@ -44,11 +44,23 @@
                             $sql2 = mysqli_query($db_link,"SELECT * FROM tp_org WHERE OrgID = '$orgid'");
                             $result2 = mysqli_fetch_assoc($sql2);
                             print('<div class="content">');
-                            print('<h1 class="orgname">'.$result2['OrgName'].'</h1>');
+                            print('<h1 class="orgname"><b>'.$result2['OrgName'].'</b></h1>');
                             print('<h1 class="place">'.$result2['OrgPlace'].'</h1><br>');
-                            print('<h2 class="food">'.$result['FoodName'].'</h2><br>');
+                            print('<h2 class="food"><b>'.$result['FoodName'].'</b></h2><br>');
                             print('<h2 class="price">'.$result['FoodPrice'].'円</h2>');
-                            print('<h2 class="stock">残り'.$result['FoodStock'].'個</h2>');
+                            if($result['FoodStock'] >= ($result['FoodStockFrom'] / 0.8)) {
+                                //print('<h2 class="stock">たくさんあります！</h2>');
+                                print($result['FoodStock']);
+                            } elseif ($result['FoodStock'] >= ($result['FoodStockFrom'] / 0.5)) {
+                                //print('<h2 class="stock">まだあります！</h2>');
+                                print($result['FoodStock']);
+                            } elseif ($result['FoodStock'] == 0) {
+                                print($result['FoodStock']);
+                                //print('<h2 class="stock">完売しました。</h2>');
+                            } elseif ($result['FoodStock'] > 0) {
+                                //print('<h2 class="stock">残りわずかです</h2>');
+                                print($result['FoodStock']);
+                            }
                             print('<div class="footer f_'.$signageid.'">'.$result['FoodDescription'].'</div>');
                             print('</div>');
 
