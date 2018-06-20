@@ -47,9 +47,9 @@
                             } elseif ($result['FoodStock'] >= ($result['FoodStockFrom'] * 0.5)) {
                                 print('<h2 class="stock blue_bg">まだあります！</h2>');
                             } elseif ($result['FoodStock'] > 0) {
-                                print('<h2 class="stock yellow_bg">残りわずかです</h2>');
+                                print('<h2 class="stock yellow_bg"><b>残りわずかです</b></h2>');
                             } elseif ($result['FoodStock'] == 0) {
-                                print('<h2 class="stock red_bg">完売しました</h2>');
+                                print('<h2 class="stock red_bg"><b>完売しました</b></h2>');
                             }
                             print('<div class="footer f_'.$signageid.'">'.$result['FoodDescription'].'</div>');
                             print('</div>');
