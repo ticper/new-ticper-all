@@ -62,7 +62,7 @@
                         <textarea name="tokucho" class="materialize-textarea"></textarea>
                         <h2>発見場所</h2>
                         <div class="input-field col s12">
-                            <select>
+                            <select name="place">
                                 <?php
                                     require_once('config/config.php');
                                     $sql = mysqli_query($db_link, "SELECT * FROM tp_place ORDER BY PlaceFloor ASC");
