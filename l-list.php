@@ -64,7 +64,10 @@
                                 $placeid = $result['PlaceID'];
                                 $sql2 = mysqli_query($db_link, "SELECT PlaceName FROM tp_place WHERE PlaceID = '$placeid'");
                                 $result2 = mysqli_fetch_assoc($sql2);
-                                print('<tr><td>'.$result['LostName'].'</td><td>'.$result['LostPoint'].'</td><td>'.$result2['PlaceName'].'</td><td>'.$result['UserID'].'</td>');
+                                $userid2 = $result['UserID'];
+                                $sql2 = mysqli_query($db_link, "SELECT UserName FROM tp_user_all WHERE UserID = '$userid2'");
+                                $result3 = mysqli_fetch_assoc($sql2);
+                                print('<tr><td>'.$result['LostName'].'</td><td>'.$result['LostPoint'].'</td><td>'.$result2['PlaceName'].'</td><td>'.$result3['UserName'].'</td>');
                                 if ($result['Got'] == 0) {
                                     print('<td><b>未受け取り</td><td><a class="btn" href="l-changestatus.php?id='.$result['LostID'].'">受け取り済にする</a></tr>');
                                 } else {
