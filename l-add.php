@@ -54,12 +54,12 @@
             <div class="row">
                 <div class="col s12">
                     <h2>落とし物追加</h2>
-                    <a href="l-list" class="btn">戻る</a>
+                    <a href="l-list.php" class="btn">戻る</a>
                     <form action="l-adddo.php" method="POST">
                         <h2>品目</h2>
                         <input type="text" name="hinmoku" class="validate">
                         <h2>特徴</h2>
-                        <textarea name="tokucho" class="validate"></textarea>
+                        <textarea name="tokucho" class="materialize-textarea"></textarea>
                         <h2>発見場所</h2>
                         <div class="input-field col s12">
                             <select>
@@ -80,9 +80,6 @@
                             $('select').formSelect();
                         });
                     </script>
-                    <table>
-                        <tr><th>品目</th><th>特徴</th><th>発見場所</th><th>登録者</th><th>受け取り</th></tr>
-                    </table>
                 </div>
             </div>
         </div>
