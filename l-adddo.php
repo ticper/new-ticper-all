@@ -21,7 +21,7 @@
         $s_hinmoku = $db_link -> real_escape_string($h_hinmoku);
         $s_tokucho = $db_link -> real_escape_string($h_tokucho);
 
-        $sql = mysqli_query($db_link, "INSERT INTO tp_lost VALUES ('', '$s_hinmoku', '$s_tokucho', '$place', '$UserID', '0'");
+        $sql = mysqli_query($db_link, "INSERT INTO tp_lost VALUES ('', '$s_hinmoku', '$s_tokucho', '$place', '$UserID', '0')");
 
         print('<script>alert("落とし物を登録しました。"); location.href = "l-list.php";</script>');
 
