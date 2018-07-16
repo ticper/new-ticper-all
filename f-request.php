@@ -17,7 +17,7 @@
         <!-- Search Engine Block -->
         <meta name="robots" content="noindex,nofollow" />
         <!-- Title -->
-        <title>落とし物追加 - Ticper</title>
+        <title>メニュー - Ticper</title>
 
         <!-- jQuery Import -->
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
@@ -36,7 +36,6 @@
                     <ul class="right hide-on-med-and-down">
                         <li><a href="l-list.php">落とし物</a></li>
                         <li><a href="signage.php">サイネージ操作</a></li>
-                        <li><a href="f-request.php">調理依頼</a></li>
                     </ul>
                 </div>
             </div>
@@ -44,7 +43,6 @@
         <ul class="sidenav" id="mobilemenu">
             <li><a href="l-list.php">落とし物</a></li>
             <li><a href="signage.php">サイネージ操作</a></li>
-            <li><a href="f-request.php">調理依頼</a></li>
         </ul>
         <script>
             $(document).ready(function(){
@@ -55,33 +53,17 @@
         <div class="container">
             <div class="row">
                 <div class="col s12">
-                    <h2>落とし物追加</h2>
-                    <a href="l-list.php" class="btn">戻る</a>
-                    <form action="l-adddo.php" method="POST">
-                        <h2>品目</h2>
-                        <input type="text" name="hinmoku" class="validate">
-                        <h2>特徴</h2>
-                        <textarea name="tokucho" class="materialize-textarea"></textarea>
-                        <h2>発見場所</h2>
-                        <div class="input-field col s12">
-                            <select name="place">
-                                <?php
-                                    require_once('config/config.php');
-                                    $sql = mysqli_query($db_link, "SELECT * FROM tp_place ORDER BY PlaceFloor ASC");
-                                    $floor = 0;
-                                    while($result = mysqli_fetch_assoc($sql)) {
-                                        print('<option value="'.$result['PlaceID'].'">'.$result['PlaceName'].'</option>');
-                                    }
-                                ?>
-                            </select>
-                        </div>
-                        <input type="submit" value="登録" class="btn">
-                    </form>
-                    <script>
-                        $(document).ready(function(){
-                            $('select').formSelect();
-                        });
-                    </script>
+                    <?php
+                        require_once('config/config.php');
+                        $sql = mysqli_query($db_link, "SELECT UserName FROM tp_user_all WHERE UserID = '$UserID'");
+                        $result = mysqli_fetch_assoc($sql);
+                    ?>
+                    <h2>ようこそ</h2>
+                    <p>こんにちは、<?php print($result['UserName']); ?>さん、今回は何をしますか？
+                    <table border="2">
+                        <tr><td style="font-size: x-large;"><a href="l-list.php"><b>落とし物管理</b></a></td><td style="font-size: x-large;"><a href="signage.php"><b>サイネージ操作</b></a></td></tr>
+                        <tr><td style="font-size: x-large;"><a href="f-request.php"><b>調理依頼</b></a></td></tr>
+                    </table>
                 </div>
             </div>
         </div>
