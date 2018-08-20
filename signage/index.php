@@ -31,7 +31,7 @@
                 <section class="contents">
                     <?php
                         $signageid = 0;
-                        $sql = mysqli_query($db_link,"SELECT * FROM tp_food ORDER BY FoodID DESC");
+                        $sql = mysqli_query($db_link,"SELECT * FROM tp_food ORDER BY OrgID DESC");
                         while($result = mysqli_fetch_assoc($sql)){
                             $signageid = $signageid + 1;
                             $orgid = $result['OrgID'];

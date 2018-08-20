@@ -53,7 +53,7 @@ html,body {
 }
 
 <?php
-	$sql = mysqli_query($db_link,"SELECT * FROM tp_food ORDER BY FoodID DESC");
+	$sql = mysqli_query($db_link,"SELECT * FROM tp_food ORDER BY OrgID DESC");
 	$count = 1;
 while($result = mysqli_fetch_assoc($sql)){
 	$now = $result['FoodID'];
