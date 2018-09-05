@@ -11,7 +11,7 @@
         $place = $_POST['place'];
         
         // データベース情報を取得
-        require_once('config/config,php');
+        require_once('config/config.php');
 
         // htmlspecialchars
         $h_hinmoku = htmlspecialchars($hinmoku, ENT_QUOTES);

@@ -58,11 +58,11 @@
                     <h2>落とし物追加</h2>
                     <a href="l-list.php" class="btn">戻る</a>
                     <form action="l-adddo.php" method="POST">
-                        <h2>品目</h2>
+                        <p>品目</p>
                         <input type="text" name="hinmoku" class="validate">
-                        <h2>特徴</h2>
+                        <p>特徴</p>
                         <textarea name="tokucho" class="materialize-textarea"></textarea>
-                        <h2>発見場所</h2>
+                        <p>発見場所</p>
                         <div class="input-field col s12">
                             <select name="place">
                                 <?php
