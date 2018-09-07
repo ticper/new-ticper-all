@@ -70,10 +70,10 @@
                                 $sql2 = mysqli_query($db_link, "SELECT UserName FROM tp_user_all WHERE UserID = '$userid2'");
                                 $result3 = mysqli_fetch_assoc($sql2);
                                 print('<tr><td>'.$result['LostName'].'</td><td>'.$result['LostPoint'].'</td><td>'.$result2['PlaceName'].'</td><td>'.$result3['UserName'].'</td>');
-                                if ($result['Got'] == 0) {
+                                if ($result['Got'] == "0") {
                                     print('<td><b>未受け取り</td><td><a class="btn" href="l-changestatus.php?id='.$result['LostID'].'">受け取り済にする</a></tr>');
-                                } else {
-                                    print('<td><b>受け取り済</td><td><a class="btn" href="l-changestatus.php?id='.$result['LostID'].'">未受け取りにする</a></tr>');
+                                } elseif($result['Got'] == "1") {
+                                    print('<td><b>受け取り済</td><td><a class="btn red" href="l-changestatus.php?id='.$result['LostID'].'">未受け取りにする</a></tr>');
                                 }
                             }
                         ?>
