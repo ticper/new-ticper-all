@@ -61,7 +61,7 @@
                         <tr><th>品目</th><th>特徴</th><th>発見場所</th><th>登録者</th><th>受け取り</th></tr>
                         <?php
                             require_once('config/config.php');
-                            $sql = mysqli_query($db_link, "SELECT * FROM tp_lost ORDER BY Got ASC");
+                            $sql = mysqli_query($db_link, "SELECT * FROM tp_lost");
                             while($result = mysqli_fetch_assoc($sql)) {
                                 $placeid = $result['PlaceID'];
                                 $sql2 = mysqli_query($db_link, "SELECT PlaceName FROM tp_place WHERE PlaceID = '$placeid'");

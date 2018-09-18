@@ -1,0 +1,29 @@
+[12-Sep-2018 09:00:17 UTC] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, boolean given in /home/ubuntu/workspace/new-ticper-all/signage/index.php on line 4
+[12-Sep-2018 09:00:17 UTC] PHP Stack trace:
+[12-Sep-2018 09:00:17 UTC] PHP   1. {main}() /home/ubuntu/workspace/new-ticper-all/signage/index.php:0
+[12-Sep-2018 09:00:17 UTC] PHP   2. mysqli_fetch_assoc() /home/ubuntu/workspace/new-ticper-all/signage/index.php:4
+[12-Sep-2018 09:08:15 UTC] PHP Parse error:  syntax error, unexpected '~' in /home/ubuntu/workspace/new-ticper-all/signage/index.php on line 16
+[12-Sep-2018 09:08:33 UTC] PHP Fatal error:  Call to undefined function rnd() in /home/ubuntu/workspace/new-ticper-all/signage/index.php on line 16
+[12-Sep-2018 09:08:33 UTC] PHP Stack trace:
+[12-Sep-2018 09:08:33 UTC] PHP   1. {main}() /home/ubuntu/workspace/new-ticper-all/signage/index.php:0
+[12-Sep-2018 09:09:40 UTC] PHP Fatal error:  Call to undefined function rnd() in /home/ubuntu/workspace/new-ticper-all/signage/index.php on line 2
+[12-Sep-2018 09:09:40 UTC] PHP Stack trace:
+[12-Sep-2018 09:09:40 UTC] PHP   1. {main}() /home/ubuntu/workspace/new-ticper-all/signage/index.php:0
+[12-Sep-2018 09:17:25 UTC] PHP Parse error:  syntax error, unexpected '}' in /home/ubuntu/workspace/new-ticper-all/signage/index.php on line 14
+[12-Sep-2018 09:18:44 UTC] PHP Parse error:  syntax error, unexpected '}' in /home/ubuntu/workspace/new-ticper-all/signage/index.php on line 24
+[12-Sep-2018 09:43:50 UTC] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, boolean given in /home/ubuntu/workspace/new-ticper-all/signage/stage.php on line 34
+[12-Sep-2018 09:43:50 UTC] PHP Stack trace:
+[12-Sep-2018 09:43:50 UTC] PHP   1. {main}() /home/ubuntu/workspace/new-ticper-all/signage/stage.php:0
+[12-Sep-2018 09:43:50 UTC] PHP   2. mysqli_fetch_assoc() /home/ubuntu/workspace/new-ticper-all/signage/stage.php:34
+[12-Sep-2018 09:43:50 UTC] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, boolean given in /home/ubuntu/workspace/new-ticper-all/signage/stage.php on line 38
+[12-Sep-2018 09:43:50 UTC] PHP Stack trace:
+[12-Sep-2018 09:43:50 UTC] PHP   1. {main}() /home/ubuntu/workspace/new-ticper-all/signage/stage.php:0
+[12-Sep-2018 09:43:50 UTC] PHP   2. mysqli_fetch_assoc() /home/ubuntu/workspace/new-ticper-all/signage/stage.php:38
+[12-Sep-2018 09:44:06 UTC] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, boolean given in /home/ubuntu/workspace/new-ticper-all/signage/stage.php on line 34
+[12-Sep-2018 09:44:06 UTC] PHP Stack trace:
+[12-Sep-2018 09:44:06 UTC] PHP   1. {main}() /home/ubuntu/workspace/new-ticper-all/signage/stage.php:0
+[12-Sep-2018 09:44:06 UTC] PHP   2. mysqli_fetch_assoc() /home/ubuntu/workspace/new-ticper-all/signage/stage.php:34
+[12-Sep-2018 09:44:06 UTC] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, boolean given in /home/ubuntu/workspace/new-ticper-all/signage/stage.php on line 38
+[12-Sep-2018 09:44:06 UTC] PHP Stack trace:
+[12-Sep-2018 09:44:06 UTC] PHP   1. {main}() /home/ubuntu/workspace/new-ticper-all/signage/stage.php:0
+[12-Sep-2018 09:44:06 UTC] PHP   2. mysqli_fetch_assoc() /home/ubuntu/workspace/new-ticper-all/signage/stage.php:38

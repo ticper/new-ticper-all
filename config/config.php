@@ -13,4 +13,6 @@
     printf("Connect Failed:".mysqli_connect_error());
     exit();
   }
+  
+  $signage = 1;
 ?>

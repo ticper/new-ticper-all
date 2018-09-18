@@ -1,3 +1,15 @@
+<?php
+    $OP = rand(0,2);
+    if($OP == 0) {
+
+    } elseif($OP == 1) {
+        header('Location: stage.php');
+        exit();
+    } elseif($OP == 2) {
+        header('Location: news.php');
+        exit();
+    }
+?>
 <!DOCTYPE HTML>
 <html charset="UTF-8">
     <head>
@@ -13,6 +25,7 @@
         <script>
             setTimeout("location.reload()",
             <?php
+
                 require_once('../config/config.php');
                 $sql = mysqli_query($db_link,"SELECT COUNT(FoodID) AS num FROM tp_food");
                 $result = mysqli_fetch_assoc($sql);
