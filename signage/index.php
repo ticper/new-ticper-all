@@ -1,14 +1,5 @@
 <?php
-    $OP = rand(0,2);
-    if($OP == 0) {
-
-    } elseif($OP == 1) {
-        header('Location: stage.php');
-        exit();
-    } elseif($OP == 2) {
-        header('Location: news.php');
-        exit();
-    }
+    session_start();
 ?>
 <!DOCTYPE HTML>
 <html charset="UTF-8">
@@ -23,7 +14,7 @@
         <!-- Search Engine Block -->
         <meta name="robots" content="noindex,nofollow" />
         <script>
-            setTimeout("location.reload()",
+            setTimeout("location.href = 'stage.php'",
             <?php
 
                 require_once('../config/config.php');
@@ -66,7 +57,7 @@
                             }
                             print('<div class="footer f_'.$signageid.'">'.$result['FoodDescription'].'</div>');
                             print('</div>');
-
+                            
                         }
                     ?>
                 </section>

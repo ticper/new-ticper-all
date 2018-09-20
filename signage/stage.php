@@ -17,6 +17,7 @@
         <!-- Materialize Import -->
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/css/materialize.min.css">
         <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/js/materialize.min.js"></script>
+        <meta http-equiv="refresh" content="5;URL='index.php'" />
     </head>
     <body>
         <!-- Navbar -->
@@ -29,14 +30,22 @@
         </nav>
         <div class="container">
             <?php
+                session_start();
+                $_SESSION['signage'] = 0;
                 require_once('../config/config.php');
-                $sql = mysqli_query($db_link, "SELECT * FROM tp_stage WHERE Start = 0 AND Finish = 0");
+                $sql = mysqli_query($db_link, "SELECT COUNT(*) AS num FROM tp_stage WHERE Start = 1 AND Finish = 0");
                 $result = mysqli_fetch_assoc($sql);
-                if($result['StageName'] == 0) {
+                if($result['num'] == 0) {
                     print('<div class="row"><div class="col s12"><h2>開催中のステージ企画はありません。</h2></div></div>');
+                } else {
+                    $sql = mysqli_query($db_link, "SELECT * FROM tp_stage WHERE Start = 1 AND Finish = 0");
+                    while($result = mysqli_fetch_assoc($sql)) {
+                        print('<div class="row"><div class="col s6"><h3>'.$result['StageName'].'</h3></div><div class="col s3"><h3>'.$result['StageTime'].'</h3></div><div class="col s3"><h3><b>現在開催中！</b></h3></div></div><hr />');
+                    }
                 }
+                $sql = mysqli_query($db_link, "SELECT * FROM tp_stage WHERE Start = 0 AND Finish = 0 Limit 0, 5");
                 while($result = mysqli_fetch_assoc($sql)) {
-                        print('<div class="row"><div class="col s5"><h2>'.$result['StageName'].'</h2></div><div class="col s5">'.$result['StageTime'].'</div><div class="col s2"><h4>現在開催中！</h4></div></div>');
+                    print('<div class="row"><div class="col s6"><h3>'.$result['StageName'].'</h3></div><div class="col s3"><h3>'.$result['StageTime'].'</h3></div><div class="col s3"><h3><b>開催予定！</b></h3></div></div><hr />');
                 }
             ?>
         </div>
