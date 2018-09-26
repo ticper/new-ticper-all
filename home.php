@@ -64,7 +64,7 @@
                     <h2>ようこそ</h2>
                     <p>こんにちは、<?php print($result['UserName']); ?>さん、今回は何をしますか？
                     <table border="2">
-                        <tr><td style="font-size: x-large;"><a href="l-list.php"><b>落とし物管理</b></a></td></tr>
+                        <tr><td style="font-size: x-large;"><a href="l-list.php"><b>落とし物管理</b></a></td><td style="font-size: x-large"><a href="t-news.php">ニュース</a></td></tr>
                         <tr><td style="font-size: x-large;"><a href="f-request.php"><b>調理依頼</b></a></td></tr>
                     </table>
                 </div>
