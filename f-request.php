@@ -58,7 +58,6 @@
                         print('<table>');
                         print('<tr><th></th><th>ID</th><th>団体</th><th>食品</th><th>枚数</th>');
                         $sql = mysqli_query($db_link, "SELECT * FROM tp_ticket WHERE Requested = 0");
-                        print('<form action="f-requested-do.php" method="POST">');
                         while($result = mysqli_fetch_assoc($sql)) {
                             $fid = $result['FoodID'];
                             $sql2 = mysqli_query($db_link, "SELECT OrgID, FoodName FROM tp_food WHERE FoodID = '$fid'");
@@ -68,7 +67,7 @@
                             $sql2 = mysqli_query($db_link, "SELECT OrgName FROM tp_org WHERE OrgID = '$oid'");
                             $result2 = mysqli_fetch_assoc($sql2);
                             $oname = $result2['OrgName'];
-                            print("<tr><td><a href='f-requestdo.php?acode=".$result['TicketACode']." class='btn'>調理依頼をする</a></td><td>".$result['TicketACode']."</td><td>".$oname."</td><td>".$fname."</td><td>".$result['Sheets']."</td></tr>");
+                            print("<tr><td><a href='f-requestdo.php?acode=".$result['TicketACode']."' class='btn'>調理依頼をする</a></td><td>".$result['TicketACode']."</td><td>".$oname."</td><td>".$fname."</td><td>".$result['Sheets']."</td></tr>");
                         }
                     ?>  
                 </div>
