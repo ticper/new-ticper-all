@@ -36,7 +36,6 @@
                     <a href="#" data-target="mobilemenu" class="sidenav-trigger"><i class="material-icons">menu</i></a>
                     <ul class="right hide-on-med-and-down">
                         <li><a href="l-list.php">落とし物</a></li>
-                        <li><a href="signage.php">サイネージ操作</a></li>
                         <li><a href="f-request.php">調理依頼</a></li>
                         <li><a href="t-news.php">ニュース</a></li>
                     </ul>
@@ -45,7 +44,6 @@
         </nav>
         <ul class="sidenav" id="mobilemenu">
             <li><a href="l-list.php">落とし物</a></li>
-            <li><a href="signage.php">サイネージ操作</a></li>
             <li><a href="f-request.php">調理依頼</a></li>
             <li><a href="t-news.php">ニュース</a></li>
         </ul>
@@ -66,7 +64,7 @@
                     <h2>ようこそ</h2>
                     <p>こんにちは、<?php print($result['UserName']); ?>さん、今回は何をしますか？
                     <table border="2">
-                        <tr><td style="font-size: x-large;"><a href="l-list.php"><b>落とし物管理</b></a></td><td style="font-size: x-large;"><a href="signage.php"><b>サイネージ操作</b></a></td></tr>
+                        <tr><td style="font-size: x-large;"><a href="l-list.php"><b>落とし物管理</b></a></td></tr>
                         <tr><td style="font-size: x-large;"><a href="f-request.php"><b>調理依頼</b></a></td></tr>
                     </table>
                 </div>
