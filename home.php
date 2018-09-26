@@ -38,6 +38,7 @@
                         <li><a href="l-list.php">落とし物</a></li>
                         <li><a href="signage.php">サイネージ操作</a></li>
                         <li><a href="f-request.php">調理依頼</a></li>
+                        <li><a href="t-news.php">ニュース</a></li>
                     </ul>
                 </div>
             </div>
@@ -46,6 +47,7 @@
             <li><a href="l-list.php">落とし物</a></li>
             <li><a href="signage.php">サイネージ操作</a></li>
             <li><a href="f-request.php">調理依頼</a></li>
+            <li><a href="t-news.php">ニュース</a></li>
         </ul>
         <script>
             $(document).ready(function(){

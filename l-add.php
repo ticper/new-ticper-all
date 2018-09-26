@@ -23,6 +23,7 @@
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 
         <!-- Materialize Import -->
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/css/materialize.min.css">
         <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/js/materialize.min.js"></script>
     </head>
@@ -37,6 +38,7 @@
                         <li><a href="l-list.php">落とし物</a></li>
                         <li><a href="signage.php">サイネージ操作</a></li>
                         <li><a href="f-request.php">調理依頼</a></li>
+                        <li><a href="t-news.php">ニュース</a></li>
                     </ul>
                 </div>
             </div>
@@ -45,12 +47,14 @@
             <li><a href="l-list.php">落とし物</a></li>
             <li><a href="signage.php">サイネージ操作</a></li>
             <li><a href="f-request.php">調理依頼</a></li>
+            <li><a href="t-news.php">ニュース</a></li>
         </ul>
         <script>
             $(document).ready(function(){
                 $('.sidenav').sidenav();
             });
         </script>
+        
         
         <div class="container">
             <div class="row">
