@@ -9,7 +9,7 @@
         <!-- Search Engine Block -->
         <meta name="robots" content="noindex,nofollow" />
         <!-- Title -->
-        <title>落とし物管理 - Ticper</title>
+        <title>ステージ企画一覧 - Ticper</title>
 
         <!-- jQuery Import -->
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
@@ -17,7 +17,7 @@
         <!-- Materialize Import -->
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/css/materialize.min.css">
         <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/js/materialize.min.js"></script>
-        <meta http-equiv="refresh" content="5;URL='index.php'" />
+        <meta http-equiv="refresh" content="10;URL='index.php'" />
     </head>
     <body>
         <!-- Navbar -->

@@ -55,22 +55,12 @@
                 <div class="col s12">
                     <?php
                         require_once('config/config.php');
-                        $sql = mysqli_query($db_link, "SELECT OrgID, OrgName FROM tp_org");
+                        print('<table>');
+                        print('<tr><th></th><th>ID</th><th>団体</th><th>食品</th><th>枚数</th>');
+                        $sql = mysqli_query($db_link, "SELECT * FROM tp_ticket WHERE Requested = 0");
+                        print('<form action="f-requested-do.php" method="POST">');
                         while($result = mysqli_fetch_assoc($sql)) {
-                            print('<h3>'.$result['OrgName'].'</h3>');
-                            print('<table>');
-                            $orgid = $result['OrgID'];
-                            $sql2 = mysqli_query($db_link, "SELECT FoodID, FoodName FROM tp_food WHERE OrgID = '$orgid'");
-                            while($result2 = mysqli_fetch_assoc($sql2)) {
-                                print('<tr><th>'.$result2['FoodName'].'</th>');
-                                $foodid = $result2['FoodID'];
-                                $sql3 = mysqli_query($db_link, "SELECT count(*) AS num FROM tp_ticket WHERE FoodID = '$foodid' AND Requested = 0");
-                                while($result3 = mysqli_fetch_assoc($sql3)) {
-                                    print('<td><font size="5">'.$result3['num'].'</font>枚</td>');
-                                    print('<td><form action="f-requestdo.php" method="POST"><input type="hidden" name="foodid" value="'.$foodid.'"><input type="hidden" name="count" value="'.$result3['num'].'"><button type="submit" class="btn">'.$result3['num'].'枚の調理を依頼する</button></form></td></tr>');
-                                }
-                            }
-                            print('</table>');
+                            print("<input type='checkbox' name='id[]' value='".$result['TicketACode']."")
                         }
                     ?>  
                 </div>
