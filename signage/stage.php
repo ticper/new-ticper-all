@@ -38,14 +38,14 @@
                 if($result['num'] == 0) {
                     print('<div class="row"><div class="col s12"><h2>開催中のステージ企画はありません。</h2></div></div>');
                 } else {
-                    $sql = mysqli_query($db_link, "SELECT * FROM tp_stage WHERE Start = 1 AND Finish = 0");
+                    $sql = mysqli_query($db_link, "SELECT StageName, DATE_FORMAT(StartTime, '%H:%i') AS timeinstring1, DATE_FORMAT(EndTime, '%H:%i') AS timeinstring2 FROM tp_stage WHERE Start = 1 AND Finish = 0");
                     while($result = mysqli_fetch_assoc($sql)) {
-                        print('<div class="row"><div class="col s6"><h3>'.$result['StageName'].'</h3></div><div class="col s3"><h3>'.$result['StageTime'].'</h3></div><div class="col s3"><h3><b>現在開催中！</b></h3></div></div><hr />');
+                        print('<div class="row"><div class="col s6"><h3>'.$result['StageName'].'</h3></div><div class="col s3"><h3>'.$result['timeinstring1'].'～'.$result['timeinstring2'].'</h3></div><div class="col s3"><h3><b>現在開催中！</b></h3></div></div><hr />');
                     }
                 }
-                $sql = mysqli_query($db_link, "SELECT * FROM tp_stage WHERE Start = 0 AND Finish = 0 Limit 0, 5");
+                $sql = mysqli_query($db_link, "SELECT StageName, DATE_FORMAT(StartTime, '%H:%i') AS timeinstring1, DATE_FORMAT(EndTime, '%H:%i') AS timeinstring2 FROM tp_stage WHERE Start = 0 AND Finish = 0 Limit 0, 5");
                 while($result = mysqli_fetch_assoc($sql)) {
-                    print('<div class="row"><div class="col s6"><h3>'.$result['StageName'].'</h3></div><div class="col s3"><h3>'.$result['StageTime'].'</h3></div><div class="col s3"><h3><b>開催予定！</b></h3></div></div><hr />');
+                    print('<div class="row"><div class="col s6"><h3>'.$result['StageName'].'</h3></div><div class="col s3"><h3>'.$result['timeinstring1'].'～'.$result['timeinstring2'].'</h3></div><div class="col s3"><h3><b>開催予定！</b></h3></div></div><hr />');
                 }
             ?>
         </div>

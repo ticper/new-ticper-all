@@ -44,3 +44,43 @@
 [26-Sep-2018 04:52:12 UTC] PHP   1. {main}() /home/ubuntu/workspace/all/signage/news.php:0
 [26-Sep-2018 04:52:12 UTC] PHP   2. mysqli_fetch_assoc() /home/ubuntu/workspace/all/signage/news.php:36
 [26-Sep-2018 04:54:11 UTC] PHP Parse error:  syntax error, unexpected '}' in /home/ubuntu/workspace/all/signage/news.php on line 52
+[07-Nov-2018 06:17:38 UTC] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, boolean given in /home/ubuntu/workspace/all/signage/stage.php on line 42
+[07-Nov-2018 06:17:38 UTC] PHP Stack trace:
+[07-Nov-2018 06:17:38 UTC] PHP   1. {main}() /home/ubuntu/workspace/all/signage/stage.php:0
+[07-Nov-2018 06:17:38 UTC] PHP   2. mysqli_fetch_assoc() /home/ubuntu/workspace/all/signage/stage.php:42
+[07-Nov-2018 06:17:38 UTC] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, boolean given in /home/ubuntu/workspace/all/signage/stage.php on line 47
+[07-Nov-2018 06:17:38 UTC] PHP Stack trace:
+[07-Nov-2018 06:17:38 UTC] PHP   1. {main}() /home/ubuntu/workspace/all/signage/stage.php:0
+[07-Nov-2018 06:17:38 UTC] PHP   2. mysqli_fetch_assoc() /home/ubuntu/workspace/all/signage/stage.php:47
+[07-Nov-2018 06:17:52 UTC] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, boolean given in /home/ubuntu/workspace/all/signage/stage.php on line 42
+[07-Nov-2018 06:17:52 UTC] PHP Stack trace:
+[07-Nov-2018 06:17:52 UTC] PHP   1. {main}() /home/ubuntu/workspace/all/signage/stage.php:0
+[07-Nov-2018 06:17:52 UTC] PHP   2. mysqli_fetch_assoc() /home/ubuntu/workspace/all/signage/stage.php:42
+[07-Nov-2018 06:17:52 UTC] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, boolean given in /home/ubuntu/workspace/all/signage/stage.php on line 47
+[07-Nov-2018 06:17:52 UTC] PHP Stack trace:
+[07-Nov-2018 06:17:52 UTC] PHP   1. {main}() /home/ubuntu/workspace/all/signage/stage.php:0
+[07-Nov-2018 06:17:52 UTC] PHP   2. mysqli_fetch_assoc() /home/ubuntu/workspace/all/signage/stage.php:47
+[07-Nov-2018 06:17:56 UTC] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, boolean given in /home/ubuntu/workspace/all/signage/stage.php on line 42
+[07-Nov-2018 06:17:56 UTC] PHP Stack trace:
+[07-Nov-2018 06:17:56 UTC] PHP   1. {main}() /home/ubuntu/workspace/all/signage/stage.php:0
+[07-Nov-2018 06:17:56 UTC] PHP   2. mysqli_fetch_assoc() /home/ubuntu/workspace/all/signage/stage.php:42
+[07-Nov-2018 06:17:56 UTC] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, boolean given in /home/ubuntu/workspace/all/signage/stage.php on line 47
+[07-Nov-2018 06:17:56 UTC] PHP Stack trace:
+[07-Nov-2018 06:17:56 UTC] PHP   1. {main}() /home/ubuntu/workspace/all/signage/stage.php:0
+[07-Nov-2018 06:17:56 UTC] PHP   2. mysqli_fetch_assoc() /home/ubuntu/workspace/all/signage/stage.php:47
+[07-Nov-2018 06:19:21 UTC] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, boolean given in /home/ubuntu/workspace/all/signage/stage.php on line 42
+[07-Nov-2018 06:19:21 UTC] PHP Stack trace:
+[07-Nov-2018 06:19:21 UTC] PHP   1. {main}() /home/ubuntu/workspace/all/signage/stage.php:0
+[07-Nov-2018 06:19:21 UTC] PHP   2. mysqli_fetch_assoc() /home/ubuntu/workspace/all/signage/stage.php:42
+[07-Nov-2018 06:19:21 UTC] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, boolean given in /home/ubuntu/workspace/all/signage/stage.php on line 47
+[07-Nov-2018 06:19:21 UTC] PHP Stack trace:
+[07-Nov-2018 06:19:21 UTC] PHP   1. {main}() /home/ubuntu/workspace/all/signage/stage.php:0
+[07-Nov-2018 06:19:21 UTC] PHP   2. mysqli_fetch_assoc() /home/ubuntu/workspace/all/signage/stage.php:47
+[07-Nov-2018 06:20:01 UTC] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, boolean given in /home/ubuntu/workspace/all/signage/stage.php on line 42
+[07-Nov-2018 06:20:01 UTC] PHP Stack trace:
+[07-Nov-2018 06:20:01 UTC] PHP   1. {main}() /home/ubuntu/workspace/all/signage/stage.php:0
+[07-Nov-2018 06:20:01 UTC] PHP   2. mysqli_fetch_assoc() /home/ubuntu/workspace/all/signage/stage.php:42
+[07-Nov-2018 06:20:01 UTC] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, boolean given in /home/ubuntu/workspace/all/signage/stage.php on line 47
+[07-Nov-2018 06:20:01 UTC] PHP Stack trace:
+[07-Nov-2018 06:20:01 UTC] PHP   1. {main}() /home/ubuntu/workspace/all/signage/stage.php:0
+[07-Nov-2018 06:20:01 UTC] PHP   2. mysqli_fetch_assoc() /home/ubuntu/workspace/all/signage/stage.php:47
