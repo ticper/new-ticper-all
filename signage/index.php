@@ -48,7 +48,7 @@
                             print('<h2 class="price">'.$result['FoodPrice'].'円</h2>');
                             if($result['FoodStock'] >= ($result['FoodStockFrom'] * 0.8)) {
                                 print('<h2 class="stock green_bg">たくさんあります！</h2>');
-                            } elseif ($result['FoodStock'] >= ($result['FoodStockFrom'] * 0.5)) {
+                            } elseif ($result['FoodStock'] >= ($result['FoodStockFrom'] * 0.3)) {
                                 print('<h2 class="stock blue_bg">まだあります！</h2>');
                             } elseif ($result['FoodStock'] > 0) {
                                 print('<h2 class="stock yellow_bg"><b>残りわずかです</b></h2>');

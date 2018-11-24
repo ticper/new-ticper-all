@@ -58,7 +58,7 @@ html,body {
 while($result = mysqli_fetch_assoc($sql)){
 	$now = $result['FoodID'];
 print('
-.contents .content:nth-child('.$count.') { background-image: url(https://yamabuki.ticper.com/booth/img/'.$now.'.png); }
+.contents .content:nth-child('.$count.') { background-image: url(https://booth.ticper.com/img/'.$now.'.png); }
 ');
 $count++;
 }
