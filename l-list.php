@@ -36,8 +36,6 @@
                     <a href="#" data-target="mobilemenu" class="sidenav-trigger"><i class="material-icons">menu</i></a>
                     <ul class="right hide-on-med-and-down">
                         <li><a href="l-list.php">落とし物</a></li>
-                        <li><a href="signage.php">サイネージ操作</a></li>
-                        <li><a href="f-request.php">調理依頼</a></li>
                         <li><a href="t-news.php">ニュース</a></li>
                     </ul>
                 </div>
@@ -45,8 +43,6 @@
         </nav>
         <ul class="sidenav" id="mobilemenu">
             <li><a href="l-list.php">落とし物</a></li>
-            <li><a href="signage.php">サイネージ操作</a></li>
-            <li><a href="f-request.php">調理依頼</a></li>
             <li><a href="t-news.php">ニュース</a></li>
         </ul>
         <script>
