@@ -10,7 +10,7 @@
     require_once('config/config.php');
     $sql = mysqli_query($db_link, "SELECT Start, Finish FROM tp_stage WHERE StageID = '$id'");
     $result = mysqli_fetch_assoc($sql);
-    if($result['Start'] == '0' and $result['End'] == '0') {
+    if($result['Start'] == '0' and $result['Finish'] == '0') {
         $sql = mysqli_query($db_link, "UPDATE tp_stage SET Start = 1 WHERE StageID = '$id'");
         header('Location: s-check.php');
         exit();
