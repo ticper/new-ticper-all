@@ -15,7 +15,7 @@
         header('Location: s-check.php');
         exit();
     } elseif ($result['Start'] == '1') {
-        $sql = mysqli_query($db_link, "UPDATE tp_stage SET End = 1 WHERE StageID = '$id'");
+        $sql = mysqli_query($db_link, "UPDATE tp_stage SET Finish = 1 WHERE StageID = '$id'");
         header('Location: s-check.php');
         exit();
     }
