@@ -37,6 +37,7 @@
                     <ul class="right hide-on-med-and-down">
                         <li><a href="l-list.php">落とし物</a></li>
                         <li><a href="t-news.php">ニュース</a></li>
+                        <li><a href="s-check.php">ステージ</a></li>
                     </ul>
                 </div>
             </div>
@@ -44,6 +45,7 @@
         <ul class="sidenav" id="mobilemenu">
             <li><a href="l-list.php">落とし物</a></li>
             <li><a href="t-news.php">ニュース</a></li>
+            <li><a href="s-check.php">ステージ</a></li>
         </ul>
         <script>
             $(document).ready(function(){
@@ -63,7 +65,7 @@
                     <p>こんにちは、<?php print($result['UserName']); ?>さん、今回は何をしますか？
                     <table border="2">
                         <tr><td style="font-size: x-large;"><a href="l-list.php"><b>落とし物管理</b></a></td><td style="font-size: x-large"><a href="t-news.php">ニュース</a></td></tr>
-                        <tr><td style="font-size: x-large;"><a href="f-request.php"><b>調理依頼</b></a></td></tr>
+                        <tr><td style="font-size: x-large;"><a href="s-check.php"><b>ステージ</b></a></td></tr>
                     </table>
                 </div>
             </div>
