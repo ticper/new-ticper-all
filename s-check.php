@@ -10,6 +10,7 @@
 session_start();
 if(isset($_SESSION['A_UserID']) == '') {
     print('<script>location.href = "index.php";</script>');
+    exit();
 } else {
     $UserID = $_SESSION['A_UserID'];
 }

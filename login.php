@@ -2,6 +2,7 @@
     session_start();
     if(isset($_SESSION['A_UserID']) != '') {
         print('<script>alert("すでにログインしています。"); location.href = "home.php"; </script>');
+        exit();
     } else {
         require_once('config/config.php');
         
