@@ -8,7 +8,7 @@
         
         $UserID = $_POST['UserID'];
         $Password = $_POST['Password'];
-
+        $UserID = $db_link -> real_escape_string($UserID);//SQL Injection
         $sql = mysqli_query($db_link, "SELECT UserID, Password FROM tp_user_all WHERE UserID = '$UserID'");
         $result = mysqli_fetch_assoc($sql);
 
