@@ -3,6 +3,7 @@
     if(isset($_SESSION['A_UserID']) == '') {
     } else {
         print('<script>location.href = "home.php";</script>');
+        exit();
     }
 ?>
 <!DOCTYPE HTML>
