@@ -8,6 +8,7 @@
     $id = $_GET['id'];
 
     require_once('config/config.php');
+    $id = $db_link -> real_escape_string($id);//SQL Injection
     $sql = mysqli_query($db_link, "SELECT Start, Finish FROM tp_stage WHERE StageID = '$id'");
     $result = mysqli_fetch_assoc($sql);
     if($result['Start'] == '0' and $result['Finish'] == '0') {
