@@ -18,6 +18,11 @@
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/css/materialize.min.css">
         <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/js/materialize.min.js"></script>
         <meta http-equiv="refresh" content="10;URL='index.php'" />
+        <script>
+            $(document).ready( function() {
+                $('body').hide().fadeIn(500);
+            });
+        </script>
     </head>
     <body>
         <!-- Navbar -->

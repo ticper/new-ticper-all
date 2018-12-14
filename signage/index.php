@@ -21,7 +21,7 @@
                 $sql = mysqli_query($db_link,"SELECT COUNT(FoodID) AS num FROM tp_food");
                 $result = mysqli_fetch_assoc($sql);
                 $signageid = $result['num'];
-                $time = $signageid * 12 * 1000;
+                $time = $signageid * 7 * 1000;
                 print($time);
             ?>
             );

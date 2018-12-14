@@ -5,7 +5,7 @@
 	$signageid = $result['num'];
 	$footerid = $signageid;
 	$signage_n = 1;
-	$time_o = 12;
+	$time_o = 8;
 	$time_s = 2;
 ?>
 
@@ -117,10 +117,11 @@ h2.food{
 }
 <?php
 while($footerid >= 1){
-print('.f_'.$footerid.' { animation: moved 10s linear '.$time_s.'s forwards; }');
-$time_s = $time_s + 12;
+print('.f_'.$footerid.' {animation: moved 10s linear '.$time_s.'s forwards; }');
+$time_s = $time_s + 7;
 $footerid--;
 }
+//  animation: moved 10s linear '.$time_s.'s forwards;
 ?>
 
 @keyframes moved {
@@ -140,7 +141,7 @@ print('
 .contents .content:nth-child('.$signageid.') { animation: fadeout 3s ease '.$time_o.'s forwards; }
 
 ');
-		$time_o = $time_o + 12;
+		$time_o = $time_o + 7;
 		$signageid--;
 }
 ?> 
